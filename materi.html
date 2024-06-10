@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(./images/Hutan-Hewan.png);
+            background-color: #f0f0f0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 0px 5vw;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        .nav-button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .nav-button div {
+            background-color: #ffffff;
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid #000000;
+            cursor: pointer;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+            border: 2px solid #000000;
+            padding: 20px;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        aside {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #000000;
+            padding: 10px;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        aside div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 1.25rem;
+            width: 150px;
+            height: 50px;
+            background-color: #99ccff;
+            padding: 40px 0;
+            margin: 20px 0;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        aside div:hover {
+            width: 160px;
+            height: 60px;
+            font-size: 1.5rem;
+            color: #ffffff;
+            transition: all 0.3s;
+        }
+
+        aside .selected {
+            width: 160px;
+            height: 60px;
+            font-size: 1.5rem;
+            color: #ffffff;
+            transition: all 0.3s;
+        }
+
+        .content-container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 5px;
+            width: 80%;
+            box-sizing: border-box;
+            /* max-width: 800px; */
+        }
+
+        .course-title {
+            border: 2px solid #000000;
+            background-color: #ffffff;
+            text-align: center;
+            width: 100%;
+            max-width: 200px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .course-content {
+            border: 2px solid #000000;
+            border-radius: 20px;
+            background-color: #ffffff;
+            overflow-y: auto;
+            flex: 1;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: justify;
+        }
+
+        @media (max-width: 1247px) {
+            main{
+            flex-wrap: wrap-reverse;
+            }
+            aside {
+                flex-direction: row;
+                max-width: none;
+                width: 100%;
+            }
+
+            aside div{
+                margin: 10px;
+                justify-content: space-around;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .course-title {
+                font-size: 1.5rem;
+                padding: 10px;
+            }
+
+            .course-content {
+                padding: 10px;
+            }
+
+            aside {
+                width: 100%;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            aside div {
+                font-size: 1rem;
+                padding: 20px 0;
+                margin: 10px 0px;
+            }
+
+            aside div:hover {
+                font-size: 1.25rem;
+                width: 150px;
+                height: 50px;
+            }
+
+            aside .selected {
+                font-size: 1.25rem;
+                width: 150px;
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            aside {
+                width: 100%;
+                max-width: none;
+                margin: 5px 0;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            aside div {
+                width: 45%;
+                margin: 5px 0;
+                padding: 10px 0;
+            }
+
+            aside div:hover,
+            aside .selected {
+                width: 45%;
+                height: auto;
+                font-size: 1rem;
+            }
+
+            .content-container {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .course-content {
+                padding: 10px;
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-button">
+            <div>Return</div>
+            <div>Exit</div>
+        </div>
+        <main>
+            <aside>
+                <div class="selected">Materi</div>
+                <div>Video</div>
+                <div>Evaluasi</div>
+            </aside>
+            <div class="content-container">
+                <div class="course-title">Hewo</div>
+                <div class="course-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
